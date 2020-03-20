@@ -67,6 +67,15 @@ div.myRefs {
 h3{
     color: 	#383838;
 }
+img.me{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    border-radius: 50%;
+    max-width:200px;
+    margin-left:100px;
+    margin-right:auto;
+    width: 50%;
+}
 div.center{
     /*height: 200px;*/
     margin-left:auto;
