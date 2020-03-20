@@ -1,7 +1,77 @@
 
+h1{
+    /*column-count: 3;*/
+    text-align: center;
+    margin:0;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    color: 	#383838;
+    background-color: #FFFFFF;
+    /*text-align: center;*/
+    font-family: Times New Roman;
+    /*font-style: ;*/
+    font-size: 40px;
 
+}
 
+/*div.myRefs> * {*/
+/*    flex: 1  0;*/
+/*}*/
+
+div.myRefs> * {
+    flex: 1 1 auto;
+}
+
+/*div.flex-container{*/
+/*    */
+/*}*/
+
+head{
+    margin:0;
+    padding:0;
+}
+body{
+    margin:0;
+    padding:0;
+    background-color:#FDFDFD;
+}
+div{
+    margin:0;
+    padding:0;}
+p.myName{
+    font-size: 45px;
+    }
+p.centerVert{
+    padding-top: 15px;
+}
+a.pages{
+    text-decoration: none;
+    color: #6D6D6D;
+}
+a.pages:hover{
+    color: #000000;
+
+}
 div.myRefs {
-    box-shadow: 0 0 2px 0 gray;
+    display: flex;
+    color: 	#383838;
+    /*column-count: 3;*/
+    text-align: center;
+    box-shadow: 0 4px 10px -10px gray;
+    /*background-color: #f1f1f1;*/
+    padding-bottom: 10px;
     width:100%;
+    column-rule: 1px solid lightgrey;
+    background-color: #FFFFFF;
+}
+h3{
+    color: 	#383838;
+}
+div.center{
+    /*height: 200px;*/
+    margin-left:auto;
+    margin-right:auto;
+    width: 400px;
+    /*background-color: blue;*/
+    /*text-align: center;*/
 }
