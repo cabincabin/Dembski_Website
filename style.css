@@ -26,6 +26,7 @@ div.myRefs> * {
 /*    */
 /*}*/
 
+
 head{
     margin:0;
     padding:0;
@@ -34,7 +35,14 @@ body{
     margin:0;
     padding:0;
     background-color:#FDFDFD;
+    color: 	#383838;
+    /*scrollbar-color: #383838 #6D6D6D;*/
 }
+
+h2{
+    color: 	#383838;
+}
+
 div{
     margin:0;
     padding:0;}
@@ -67,12 +75,15 @@ div.myRefs {
 h3{
     color: 	#383838;
 }
+p.myGrey{
+    color: 	#6D6D6D;
+}
 img.me{
     padding-top: 50px;
     padding-bottom: 50px;
     border-radius: 50%;
     max-width:200px;
-    margin-left:100px;
+    margin-left:225px;
     margin-right:auto;
     width: 50%;
 }
@@ -80,7 +91,87 @@ div.center{
     /*height: 200px;*/
     margin-left:auto;
     margin-right:auto;
-    width: 400px;
+    width: 650px;
     /*background-color: blue;*/
     /*text-align: center;*/
 }
+div.center2{
+    /*height: 200px;*/
+    margin-left:auto;
+    margin-right:auto;
+    width: 800px;
+    /*background-color: blue;*/
+    /*text-align: center;*/
+}
+div.dropShadow{
+    position: relative;
+    /*box-shadow: 0 15px 15px -10px white;*/
+    box-shadow: 0 8px 10px -10px white;
+    height: 25px;
+    z-index: 2;
+
+}
+
+hr{
+    height: 1px;
+    color: LightGray;
+    background-color: LightGray;
+    border: none;
+}
+
+g.fence{
+    color: #000000;
+}
+g.mando{
+    color: #000000;
+}
+g.jewel{
+    color: #000000;
+}
+g.sculpt{
+    color: #000000;
+}
+
+/*g.fence:hover{*/
+/*    color: #6D6D6D;*/
+/*}*/
+/*g.mando:hover{*/
+/*    color:#6D6D6D;*/
+/*}*/
+/*g.jewel:hover{*/
+/*    color: #6D6D6D;*/
+/*}*/
+/*g.sculpt:hover{*/
+/*    color: #6D6D6D;*/
+/*}*/
+.no-padding{
+    margin: 0;
+    padding: 0;
+}
+
+p.smallfont{
+    font-size: 15px;
+}
+div.show{
+    position: relative;
+    background-color: 	steelblue;
+    height: 0px;
+    z-index: 1;
+
+}
+
+div.actImg{
+    display: flex;
+
+}
+
+
+div.actImg> * {
+    flex: 1 1 auto;
+}
+
+p.year{
+}
+p.place{}
+p.title{}
+p.disc{}
