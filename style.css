@@ -36,6 +36,7 @@ body{
     padding:0;
     background-color:#FDFDFD;
     color: 	#383838;
+    overflow: hidden;
     /*scrollbar-color: #383838 #6D6D6D;*/
 }
 
@@ -111,6 +112,8 @@ div.dropShadow{
     z-index: 2;
 
 }
+
+
 
 hr{
     height: 1px;
