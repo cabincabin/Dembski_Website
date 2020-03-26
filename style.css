@@ -34,7 +34,7 @@ head{
 body{
     margin:0;
     padding:0;
-    background-color:#FDFDFD;
+    background-color:#FAFAFA;
     color: 	#383838;
     overflow: hidden;
     /*scrollbar-color: #383838 #6D6D6D;*/
@@ -153,11 +153,12 @@ g.sculpt{
 }
 
 p.smallfont{
-    font-size: 15px;
+    font-size: 17px;
+    font-family: Times New Roman
 }
 div.show{
     position: relative;
-    background-color: 	steelblue;
+    background-color: #3090C7;
     height: 0px;
     z-index: 1;
 
