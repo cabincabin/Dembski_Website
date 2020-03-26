@@ -18,6 +18,12 @@ h1{
 /*    flex: 1  0;*/
 /*}*/
 
+h3.c2{
+    /*color: #4A5357;*/
+    color: #545D61;
+    /*color: #5E676B;*/
+}
+
 div.myRefs> * {
     flex: 1 1 auto;
 }
@@ -36,7 +42,7 @@ body{
     padding:0;
     background-color:#FAFAFA;
     color: 	#383838;
-    overflow: hidden;
+    overflow-y:scroll;
     /*scrollbar-color: #383838 #6D6D6D;*/
 }
 
@@ -76,7 +82,7 @@ div.myRefs {
 h3{
     color: 	#383838;
 }
-p.myGrey{
+.myGrey{
     color: 	#6D6D6D;
 }
 img.me{
@@ -152,7 +158,7 @@ g.sculpt{
     padding: 0;
 }
 
-p.smallfont{
+.smallfont{
     font-size: 17px;
     font-family: Times New Roman
 }
@@ -175,6 +181,8 @@ div.actImg> * {
 }
 
 p.year{
+    color: #3090C7;
+
 }
 p.place{}
 p.title{}
