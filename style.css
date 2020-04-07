@@ -63,6 +63,27 @@ a.pages{
     text-decoration: none;
     color: #6D6D6D;
 }
+
+a:link {
+    color: #383838;
+}
+
+/* mouse over link */
+a:hover {
+    color:  #6D6D6D;
+}
+
+a:visited {
+    color: #383838;
+}
+
+a:hover {
+    color: #6D6D6D;
+}
+
+/* selected link */
+
+
 a.pages:hover{
     color: #000000;
 
@@ -178,6 +199,19 @@ div.actImg{
 
 div.actImg> * {
     flex: 1 1 auto;
+}
+
+div.ProjFlex{
+    display: flex;
+}
+
+div.ProjFlex:first-child{
+    flex: 1 1 auto;
+
+
+}
+div.ProjFlex>*{
+    flex: 1 2 auto;
 }
 
 p.year{
