@@ -1,4 +1,6 @@
 d3.select(".show").attr("style", "height:0px;");
+let widthflag = false;
+
 const sleep = (milliseconds) => {
     return new Promise(resolve => setTimeout(resolve, milliseconds))
 };
@@ -9,11 +11,21 @@ sleep(1).then(() => {
     sleep(3).then(() => {
         d3.select(".show").transition(1).attr("style", "height:0px;");
         d3.select(".setGrey").transition(1).attr("style",  "height:"+(document.documentElement.clientHeight-d3.select(".show").node().offsetTop )+"px; background-color:Gainsboro;");
+        widthflag = true;
     });
     //do stuff
 });
 
+function redraw(){
+    if (widthflag === false){
+        d3.select(".show").attr("style", "height:"+(document.documentElement.clientHeight-d3.select(".show").node().offsetTop )+"px;");
+    }
+    if (widthflag === true){
+        d3.select(".setGrey").attr("style",  "height:"+(document.documentElement.clientHeight-d3.select(".show").node().offsetTop )+"px; background-color:Gainsboro;");
+    }
+}
 
+window.addEventListener("resize", redraw);
 
 
 d3.select(".jewel").on("mouseover", function(d){
@@ -114,11 +126,13 @@ d3.select(".sculpt").on("mouseover", function(d){
 });
 
 function open() {
+    widthflag = false;
     // var num = (screen.height-d3.select(".show").node().offsetTop);
     d3.select(".show").transition(600).attr("style", "height:"+(document.documentElement.clientHeight-d3.select(".show").node().offsetTop )+"px;");
     d3.select(".setGrey").transition(600).attr("style",  "height:0px; background-color:Gainsboro;");
 }
 function closed() {
+    widthflag = true;
     d3.select(".show").transition(600).attr("style", "height:0px;");
     d3.select(".show").selectAll("div").remove();
     d3.select(".setGrey").transition(600).attr("style",  "height:"+(document.documentElement.clientHeight-d3.select(".show").node().offsetTop )+"px; background-color:Gainsboro;");//
