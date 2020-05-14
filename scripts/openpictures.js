@@ -97,14 +97,14 @@ d3.select(".sculpt").on("mouseover", function(d){
     d3.select(".sculpt").style("color", "#6D6D6D");
     open();
     d3.select(".show").append("div");
-    d3.select(".show").append("div").append("img").attr("src", "resources/sculpt1.gif").attr("style","padding-top: 60px;\n" +
+    d3.select(".show").append("div").append("img").attr("src", "resources/sculpt2.gif").attr("style","padding-top: 60px;\n" +
         "    padding-bottom: 54px;\n" +
         "    border-radius: 50%;\n" +
         "    max-width:1px;\n").transition(500).attr("style","padding-top: 60px;\n" +
         "    padding-bottom: 54px;\n" +
         "    border-radius: 50%;\n" +
         "    max-width:300px;");
-    d3.select(".show").append("div").append("img").attr("src", "resources/sculpt2.gif").attr("style","padding-top: 60px;\n" +
+    d3.select(".show").append("div").append("img").attr("src", "resources/sculpt1.gif").attr("style","padding-top: 60px;\n" +
         "    padding-bottom: 54px;\n" +
         "    border-radius: 50%;\n" +
         "    max-width:1px;\n").transition(500).attr("style","padding-top: 60px;\n" +
