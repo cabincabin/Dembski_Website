@@ -6,11 +6,17 @@ const sleep = (milliseconds) => {
 };
 
 sleep(1).then(() => {
-    d3.select(".show").transition(1).attr("style", "height:"+(document.documentElement.clientHeight-d3.select(".show").node().offsetTop )+"px;");
+    var docLen = document.documentElement.clientHeight-d3.select(".show").node().offsetTop;
+    if(docLen<450)
+        docLen=450;
+    d3.select(".show").transition(1).attr("style", "height:"+(docLen)+"px;");
     d3.select(".setGrey").transition(1).attr("style",  "height:0px; background-color:Gainsboro;");
     sleep(3).then(() => {
+        var docLen2 = document.documentElement.clientHeight-d3.select(".show").node().offsetTop;
+        if(docLen2<450)
+            docLen2=450;
         d3.select(".show").transition(1).attr("style", "height:0px;");
-        d3.select(".setGrey").transition(1).attr("style",  "height:"+(document.documentElement.clientHeight-d3.select(".show").node().offsetTop )+"px; background-color:Gainsboro;");
+        d3.select(".setGrey").transition(1).attr("style",  "height:"+docLen2+"px; background-color:Gainsboro;");
         widthflag = true;
     });
     //do stuff
@@ -126,16 +132,26 @@ d3.select(".sculpt").on("mouseover", function(d){
 });
 
 function open() {
+    refresh();
     widthflag = false;
     // var num = (screen.height-d3.select(".show").node().offsetTop);
-    d3.select(".show").transition(600).attr("style", "height:"+(document.documentElement.clientHeight-d3.select(".show").node().offsetTop )+"px;");
+    var docLen3 = document.documentElement.clientHeight-d3.select(".show").node().offsetTop;
+    if(docLen3<450)
+        docLen3=450;
+    d3.select(".show").transition(600).attr("style", "height:"+(docLen3)+"px;");
     d3.select(".setGrey").transition(600).attr("style",  "height:0px; background-color:Gainsboro;");
 }
-function closed() {
+function refresh() {
     widthflag = true;
-    d3.select(".show").transition(600).attr("style", "height:0px;");
+
     d3.select(".show").selectAll("div").remove();
-    d3.select(".setGrey").transition(600).attr("style",  "height:"+(document.documentElement.clientHeight-d3.select(".show").node().offsetTop )+"px; background-color:Gainsboro;");//
+
+}
+function closed() {
+    // widthflag = true;
+    // d3.select(".show").transition(600).attr("style", "height:0px;");
+    // d3.select(".show").selectAll("div").remove();
+    // d3.select(".setGrey").transition(600).attr("style",  "height:"+(document.documentElement.clientHeight-d3.select(".show").node().offsetTop )+"px; background-color:Gainsboro;");//
     // d3.select(".show").attr("style", "height:0px;display:none;")
 }
 //
