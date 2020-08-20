@@ -83,6 +83,7 @@ d3.select(".mando").on("mouseover", function(d){
     closed();
 });
 d3.select(".fence").on("mouseover", function(d){
+    open();
     d3.select(".fence").style("color", "#6D6D6D");
     d3.select(".show").append("div").append("img").attr("src", "resources/fence1.gif").attr("style","padding-top: 75px;\n" +
         "    box-shadow: 0 8px 10px -10px white;\n"+
@@ -91,7 +92,7 @@ d3.select(".fence").on("mouseover", function(d){
         "    max-width:50px;\n").transition(500).attr("style","padding-top: 75px;\n" +
         "    padding-left: "+ (document.documentElement.clientWidth/2-480/2)+"px;\n" +
         "    max-width:480px;");
-    open();
+    
     //https://media.giphy.com/media/QaARNA50Kt2fnxiNVW/giphy.gif
 
 }).on("mouseout", function(d){
